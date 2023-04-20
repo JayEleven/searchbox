@@ -1,4 +1,4 @@
 <div class="movie-list animate__animated animate__fadeInUp" *ngIf="movies.length">
 	<app-item-card *ngFor="let movie of movies; let i = index" [movie]="movie" [favourite]="favourite" [watched]="watched"> </app-item-card>
 </div>
-<div *ngIf="!movies.length">No items in your {{ listType }} list</div>
+<div *ngIf="!movies.length" class="text-center warn-color mt-3">No items in your {{ listType }} list</div>

@@ -12,5 +12,5 @@
 		<app-item-card *ngFor="let movie of movies; let i = index" [movie]="movie" [favourite]="favourite" [watched]="watched"> </app-item-card>
 	</div>
 	<button class="load-more" mat-flat-button color="accent" *ngIf="movies.length && moviesLength >= 10" (click)="loadMore()">Load More</button>
-	<div *ngIf="!movies.length && noResults && query">Could not find any results that match your query</div>
+	<div *ngIf="!movies.length && noResults && query" class="text-center warn-color mt-3">Could not find any results that match your query</div>
 </div>

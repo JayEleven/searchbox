@@ -34,6 +34,7 @@ export class SearchFormComponent implements OnInit, OnChanges {
 
 	/**
 	 * Search for movie results on click or enter
+	 * @param loadMore - if true load more movies to current list
 	 */
 	getSearchResults(loadMore: boolean) {
 		if (loadMore) {
@@ -69,5 +70,14 @@ export class SearchFormComponent implements OnInit, OnChanges {
 				},
 			})
 		);
+	}
+
+	clearResults() {
+		this.query = '';
+		this.currentMovies = [];
+		this.movies = [];
+		this.noResults.emit(false);
+		this.moviesResult.emit(this.movies);
+		this.moviesLength.emit(0);
 	}
 }

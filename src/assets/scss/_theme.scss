@@ -36,6 +36,10 @@ $dark-theme: mat-dark-theme($candy-app-primary, $candy-app-accent, $candy-app-wa
 	}
 }
 
+.warn-color {
+	color: mat-color($candy-app-warn) !important;
+}
+
 .darkMode {
 	@include angular-material-theme($dark-theme);
 	.mat-app-background {

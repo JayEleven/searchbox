@@ -1,5 +1,6 @@
 .search-field {
-	.extra-search {
+	.extra-search,
+	.search-actions {
 		display: grid;
 		align-items: center;
 		grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));

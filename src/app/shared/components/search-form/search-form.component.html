@@ -20,6 +20,9 @@
 				</mat-select>
 			</mat-form-field>
 		</div>
-		<button mat-flat-button color="accent" (click)="getSearchResults(false)">Search</button>
+		<div class="search-actions">
+			<button mat-flat-button (click)="clearResults()" [disabled]="!query">Clear</button>
+			<button mat-flat-button color="accent" (click)="getSearchResults(false)" [disabled]="!query">Search</button>
+		</div>
 	</mat-card>
 </div>
