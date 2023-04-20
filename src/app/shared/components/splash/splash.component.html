@@ -1,0 +1,14 @@
+<div
+	class="app-splash-screen"
+	[ngStyle]="{
+		left: windowWidth,
+		opacity: opacityChange,
+		transition: splashTransition
+	}"
+	*ngIf="showSplash"
+>
+	<div class="app-splash-inner">
+		<app-svg-icon name="searchbox-logo"></app-svg-icon>
+		<div class="app-loader"></div>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+.movie-item {
+	img {
+		height: 280px;
+		object-fit: cover;
+		cursor: pointer;
+	}
+	.title {
+		white-space: nowrap;
+		width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	mat-card-actions {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}

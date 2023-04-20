@@ -1,0 +1,25 @@
+<div class="search-field">
+	<mat-card>
+		<mat-form-field appearance="outline" color="accent">
+			<mat-label>Search for a movie, series or episode</mat-label>
+			<mat-icon matSuffix (click)="getSearchResults(false)">search</mat-icon>
+			<input type="search" matInput [(ngModel)]="query" (keyup.enter)="getSearchResults(false)" />
+		</mat-form-field>
+		<div class="extra-search" *ngIf="query">
+			<mat-form-field appearance="outline" color="accent">
+				<mat-label>Year</mat-label>
+				<mat-icon matSuffix (click)="getSearchResults(false)">search</mat-icon>
+				<input type="text" matInput [(ngModel)]="year" (keyup.enter)="getSearchResults(false)" />
+			</mat-form-field>
+			<mat-form-field appearance="outline" color="accent">
+				<mat-label>Type</mat-label>
+				<mat-select [(ngModel)]="type" (ngModelChange)="getSearchResults(false)">
+					<mat-option value="movie">Movie</mat-option>
+					<mat-option value="series">Series</mat-option>
+					<mat-option value="episode">Episode</mat-option>
+				</mat-select>
+			</mat-form-field>
+		</div>
+		<button mat-flat-button color="accent" (click)="getSearchResults(false)">Search</button>
+	</mat-card>
+</div>

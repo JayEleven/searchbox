@@ -1,0 +1,12 @@
+.search-field {
+	.extra-search {
+		display: grid;
+		align-items: center;
+		grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+		grid-gap: 15px;
+	}
+	button {
+		width: 100%;
+		margin-top: 10px;
+	}
+}

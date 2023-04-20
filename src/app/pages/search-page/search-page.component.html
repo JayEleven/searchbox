@@ -1,0 +1,16 @@
+<div class="movies-search" [ngClass]="movies.length || (!movies.length && noResults && query) ? 'searched' : ''">
+	<app-search-form
+		class="animate__animated"
+		[ngClass]="movies.length || (!movies.length && noResults && query) ? 'animate__fadeInUp' : ' animate__fadeInDown'"
+		[page]="page"
+		(moviesResult)="movies = $event"
+		(queryResult)="query = $event"
+		(noResults)="noResults = $event"
+		(moviesLength)="moviesLength = $event"
+	></app-search-form>
+	<div class="movie-list animate__animated animate__fadeIn" *ngIf="movies.length">
+		<app-item-card *ngFor="let movie of movies; let i = index" [movie]="movie" [favourite]="favourite" [watched]="watched"> </app-item-card>
+	</div>
+	<button class="load-more" mat-flat-button color="accent" *ngIf="movies.length && moviesLength >= 10" (click)="loadMore()">Load More</button>
+	<div *ngIf="!movies.length && noResults && query">Could not find any results that match your query</div>
+</div>

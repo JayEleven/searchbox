@@ -1,0 +1,30 @@
+<mat-card class="movie-item" *ngIf="movie">
+	<img mat-card-image [src]="movie.Poster | defaultImage" [routerLink]="['/details/' + movie.imdbID]" />
+	<div class="title">
+		<strong>{{ movie.Title }}</strong>
+	</div>
+
+	<div>{{ movie.Type }}</div>
+
+	<mat-card-actions>
+		<div>
+			<button
+				mat-icon-button
+				[color]="inMovieList(favourite, movie) ? 'warn' : ''"
+				(click)="storageService.setFavouritelist(favourite, true, movie, !inMovieList(favourite, movie) ? 'add' : 'remove')"
+			>
+				<mat-icon fontIcon="favorite"></mat-icon>
+			</button>
+			<button
+				mat-icon-button
+				[color]="inMovieList(watched, movie) ? 'accent' : ''"
+				(click)="storageService.setWatchedList(watched, true, movie, !inMovieList(watched, movie) ? 'add' : 'remove')"
+			>
+				<mat-icon fontIcon="visibility"></mat-icon>
+			</button>
+		</div>
+		<button mat-icon-button color="accent" [routerLink]="['/details/' + movie.imdbID]">
+			<mat-icon fontIcon="arrow_forward"></mat-icon>
+		</button>
+	</mat-card-actions>
+</mat-card>

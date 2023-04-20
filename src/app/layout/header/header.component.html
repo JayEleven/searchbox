@@ -1,0 +1,9 @@
+<header class="top-header">
+	<mat-toolbar color="primary">
+		<app-svg-icon name="searchbox-logo" role="button" routerLink="/"></app-svg-icon>
+		<div class="settings">
+			<mat-icon *ngIf="darkMode" (click)="toggleThemeMode()">light_mode</mat-icon>
+			<mat-icon *ngIf="!darkMode" (click)="toggleThemeMode()">bedtime</mat-icon>
+		</div>
+	</mat-toolbar>
+</header>

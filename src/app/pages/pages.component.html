@@ -1,0 +1,12 @@
+<app-splash [duration]="1"></app-splash>
+<app-header (setThemeMode)="setThemeMode($event)"></app-header>
+<div class="content mat-app-background">
+	<div class="content-inner">
+		<router-outlet></router-outlet>
+		<div class="menu">
+			<button mat-fab color="accent" (click)="openBottomSheet()">
+				<mat-icon fontIcon="menu"></mat-icon>
+			</button>
+		</div>
+	</div>
+</div>

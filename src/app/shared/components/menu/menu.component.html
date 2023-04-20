@@ -1,0 +1,11 @@
+<mat-nav-list>
+	<a [routerLink]="['/saved/favourite']" mat-list-item (click)="openLink()">
+		<mat-icon mat-list-icon fontIcon="favorite" color="warn"></mat-icon>
+		<span mat-line>Favourite List</span>
+	</a>
+
+	<a [routerLink]="['/saved/watched']" mat-list-item (click)="openLink()">
+		<mat-icon mat-list-icon fontIcon="visibility" color="accent"></mat-icon>
+		<span mat-line>Watched List</span>
+	</a>
+</mat-nav-list>

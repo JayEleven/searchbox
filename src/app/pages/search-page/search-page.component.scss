@@ -1,0 +1,28 @@
+.movies-search {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	justify-content: center;
+	app-search-form {
+		display: block;
+		max-width: 600px;
+		width: 100%;
+		transition: all 0.3s ease;
+		margin: 0 auto;
+	}
+	.movie-list {
+		margin-top: 20px;
+	}
+	&.searched {
+		height: auto;
+		justify-content: start;
+	}
+	.load-more {
+		max-width: 600px;
+		width: 100%;
+		display: block;
+		margin: 20px auto 0;
+	}
+}
