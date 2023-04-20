@@ -49,7 +49,7 @@ describe('SearchFormComponent', () => {
 		];
 		// act
 		stubApiService.searchMovies.and.returnValue(of(response));
-		component.getSearchResults();
+		component.getSearchResults(false);
 		fixture.detectChanges();
 		expect(component.movies).toEqual(response);
 	});
@@ -62,7 +62,7 @@ describe('SearchFormComponent', () => {
 		spyOn(component.moviesLength, 'emit');
 		spyOn(component.moviesResult, 'emit');
 		stubApiService.searchMovies.and.returnValue(of(response));
-		component.getSearchResults();
+		component.getSearchResults(false);
 		fixture.detectChanges();
 		component.noResults.emit(true);
 		component.moviesLength.emit(0);
